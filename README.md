@@ -1,5 +1,7 @@
 # Multimodal RAG on "The Batch" atricles
 
+## **Live Streamlit demo link: [https://the-batch-rag.streamlit.app/](https://the-batch-rag.streamlit.app/)**
+
 ### Run the following snippet to setup virtual env
 
 ```bash
@@ -28,7 +30,7 @@ From scraped articles and images I manually created kaggle dataset. Look [https:
 ### For images 
 
 Images required descriptions, so I used `gpt-4o` model to describe each. I also added article context to the query, so image descriptions were more related. Look [https://www.kaggle.com/code/ivanhusarov/preprocess-image-descriptions](https://www.kaggle.com/code/ivanhusarov/preprocess-image-descriptions). 
-In this notebook I checked difference in image/article dataset and already generated descriptions. As a result, this notebook updates image another descriptions dataset. Look [https://www.kaggle.com/code/ivanhusarov/preprocess-image-descriptions](https://www.kaggle.com/code/ivanhusarov/preprocess-image-descriptions
+In this notebook I checked difference in image/article dataset and already generated descriptions. As a result, this notebook updates image another descriptions dataset. Look [https://www.kaggle.com/code/ivanhusarov/preprocess-image-descriptions](https://www.kaggle.com/code/ivanhusarov/preprocess-image-descriptions).
 
 ### For articles
 
@@ -70,3 +72,14 @@ It's important to admit, that on the retrieval time, image is described with sam
 ## Evaluation on synthetic dataset
 
 I also tried to generate some evaluation pipeline with `RAGAS`. I'm not sure about it's actual accuracy, since questions, answers and contexts were all generated with special prompts, so results are not stable.
+![image](https://github.com/user-attachments/assets/27a75776-cb0b-48ad-a65d-4961122b3a24)
+
+## Links
+[https://www.kaggle.com/code/ivanhusarov/the-batch-articles-multimodal-rag](https://www.kaggle.com/code/ivanhusarov/the-batch-articles-multimodal-rag)
+
+[https://www.kaggle.com/code/ivanhusarov/preprocess-image-descriptions](https://www.kaggle.com/code/ivanhusarov/preprocess-image-descriptions)
+
+[https://www.kaggle.com/datasets/ivanhusarov/the-batch-articles-initial](https://www.kaggle.com/datasets/ivanhusarov/the-batch-articles-initial)
+
+[https://www.kaggle.com/code/ivanhusarov/preprocess-image-descriptions](https://www.kaggle.com/code/ivanhusarov/preprocess-image-descriptions)
+
