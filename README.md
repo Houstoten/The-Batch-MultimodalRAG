@@ -1,6 +1,7 @@
 # Multimodal RAG on "The Batch" atricles
 
 ## **Live Streamlit demo link: [https://the-batch-rag.streamlit.app/](https://the-batch-rag.streamlit.app/)**
+Also streamlit demo code could be found in the following repo [https://github.com/Houstoten/the-batch-rag](https://github.com/Houstoten/the-batch-rag)
 
 ### Run the following snippet to setup virtual env
 
@@ -51,6 +52,7 @@ After vector store was populated and retriever was generated, I decided to utili
 ## Context generation and QA
 
 As LLM for QA, `gpt4-o` is used here. After context is generated from retrieved results, specific QA prompt is populated with question and context.
+Image descriptions are generated with same `gpt4-o` and added to the query as a context.
 
 ## Evaluation
 
@@ -75,6 +77,11 @@ I also tried to generate some evaluation pipeline with `RAGAS`. I'm not sure abo
 ![image](https://github.com/user-attachments/assets/27a75776-cb0b-48ad-a65d-4961122b3a24)
 
 ## Links
+
+[https://the-batch-rag.streamlit.app/](https://the-batch-rag.streamlit.app/)
+
+[https://github.com/Houstoten/the-batch-rag](https://github.com/Houstoten/the-batch-rag)
+
 [https://www.kaggle.com/code/ivanhusarov/the-batch-articles-multimodal-rag](https://www.kaggle.com/code/ivanhusarov/the-batch-articles-multimodal-rag)
 
 [https://www.kaggle.com/code/ivanhusarov/preprocess-image-descriptions](https://www.kaggle.com/code/ivanhusarov/preprocess-image-descriptions)
