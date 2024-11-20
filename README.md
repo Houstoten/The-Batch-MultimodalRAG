@@ -51,3 +51,5 @@ As LLM for QA, `gpt4-o` is used here. After context is generated from retrieved 
 
 ## Evaluation
 
+
+![alt text](0BBB8E74-4523-42A3-B7AD-BAEE827466C2.jpeg)
