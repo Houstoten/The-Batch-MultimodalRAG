@@ -39,6 +39,7 @@ Articles required only text extraction from `html` structure, it was done with `
 Both image descriptions and texts are from now processed the same. The only difference, is that for images additional metadata fields are added: `image_url` and `is_image`.
 For chunking technique I decided to use `by-sentence` chunking with `2` sentences in each chunk, with `1` overlapping for each chunk in a document. 
 As embedding model, I decided to use `BAAI/bge-large-en-v1.5`, as it gives relatively good performance, one could even said, that it performs almost the same with `OpenAI` embeddings.
+For this part and all below, look [https://www.kaggle.com/code/ivanhusarov/the-batch-articles-multimodal-rag](https://www.kaggle.com/code/ivanhusarov/the-batch-articles-multimodal-rag)
 
 ## Adding to vector store and generating retriever
 
@@ -51,5 +52,21 @@ As LLM for QA, `gpt4-o` is used here. After context is generated from retrieved 
 
 ## Evaluation
 
+### Text query evaluation
 
+For text results are great, `0.99` similarity score for the vaguely defined query. LLM also generated response nicely
+![alt text](FF7553D0-82EC-47E7-9A08-153C7367EE01.jpeg)
+
+### Text query evaluation 
+
+For images results are also good enough. LLM returned `I don't know` as a result, however relevant document was found with `0.99` similarity score. Here's first image is query image.
+![alt text](robots_test.png)
+
+And now results.
 ![alt text](0BBB8E74-4523-42A3-B7AD-BAEE827466C2.jpeg)
+
+It's important to admit, that on the retrieval time, image is described with same LLM `gpt4-o`, but without any document context, so this step in someway prevents `"overfitting"`.
+
+## Evaluation on synthetic dataset
+
+I also tried to generate some evaluation pipeline with `RAGAS`. I'm not sure about it's actual accuracy, since questions, answers and contexts were all generated with special prompts, so results are not stable.
