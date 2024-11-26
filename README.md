@@ -78,10 +78,6 @@ Here I also picked one from the tests I performed in notebook mentioned above. F
 
 ![alt text](resources/10098B8C-79E7-4FDC-AC1A-59F7F772BFD7.jpeg)
 
-
-And now results.
-![alt text](resources/0BBB8E74-4523-42A3-B7AD-BAEE827466C2.jpeg)
-
 It's important to admit, that on the retrieval time, image is described with same LLM `gpt4-o`, but without any document context, so this step in someway prevents `"overfitting"`.
 
 ## Evaluation on synthetic dataset
