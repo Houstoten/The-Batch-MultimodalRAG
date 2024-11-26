@@ -34,6 +34,14 @@ if __name__ == "__main__":
     df = pd.read_csv(df_path)
     df.set_index('Url', inplace=True)
 
+    from streamlit.runtime.scriptrunner import get_script_run_ctx
+    if get_script_run_ctx() is None:
+        from streamlit.web.cli import main
+        import sys
+        sys.argv = ['streamlit', 'run', __file__]
+        main()
+        print("Streamlit set up!")
+
     st.title("📄 The Batch articles RAG system")
     st.write(
         "Ask anything about tech and we will try to help you!",

@@ -3,7 +3,7 @@
 ## **Live Streamlit demo link: [https://the-batch-rag.streamlit.app/](https://the-batch-rag.streamlit.app/)**
 Also streamlit demo code could be found in the following repo [https://github.com/Houstoten/the-batch-rag](https://github.com/Houstoten/the-batch-rag)
 
-### Run the following snippet to setup virtual env
+### Run the following snippet to setup virtual env and run the app
 
 ```bash
 conda create --name <env_name> --file requirements.txt

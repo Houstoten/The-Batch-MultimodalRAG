@@ -7,13 +7,22 @@ from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from langchain_chroma import Chroma
 import chromadb
 import os
+import torch
 
 sitemap_url = 'https://www.deeplearning.ai/sitemap-0.xml'
 scrap_url = 'https://www.deeplearning.ai/the-batch/'
 
 def setup_embedding_fn():
+    device = 'cpu'
+    if torch.cuda.is_available():
+        device = 'cuda'  # Use CUDA if available
+    elif torch.backends.mps.is_available():
+        device = 'mps'  # Use MPS (Metal Performance Shaders) if available
+    else:
+        device = 'cpu'  # Fallback to CPU
+
     model_name = "BAAI/bge-large-en-v1.5"
-    model_kwargs = {'device': 'mps'}
+    model_kwargs = {'device': device}
     encode_kwargs = {"normalize_embeddings": True}
 
     return HuggingFaceBgeEmbeddings(
