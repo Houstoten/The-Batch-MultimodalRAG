@@ -84,22 +84,6 @@ def compose_qa(vector_store):
         base_compressor=compressor, base_retriever=retriever
     )
 
-    # template = """Answer the question based only on the following context. If you cannot answer the question with the context, please respond with 'I don't know':
-
-    # ### CONTEXT
-    # {context}
-
-    # ### QUESTION
-    # Question: {question}
-    # """
-    # prompt = PromptTemplate(
-    #     template=template, 
-    #     input_variables=[
-    #         'context', 
-    #         'question',
-    #     ]
-    # )
-
     parser = JsonOutputParser(pydantic_object=QAFormat_RAG)
 
     prompt = PromptTemplate(
@@ -111,11 +95,3 @@ def compose_qa(vector_store):
     chain = (prompt | llm | parser)
 
     return chain, compression_retriever
-
-    # qa_chain = RetrievalQA.from_chain_type(llm=llm, 
-    #                                     retriever=compression_retriever,     
-    #                                     return_source_documents=True,
-    #                                     chain_type_kwargs={"prompt": prompt}
-    # )
-
-    # return qa_chain
