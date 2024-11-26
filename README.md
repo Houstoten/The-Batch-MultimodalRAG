@@ -15,6 +15,13 @@ uv run run.py
 
 This will load all dependencies, models and datasets and open streamlit webapp for inference.
 
+To build and run docker image run the following:
+
+```bash
+docker build -t mm_rag:v4 .
+docker run --env-file ./.env -p 8501:8501  mm_rag:v4
+```
+
 ## High-level architecture
 
 ![alt text](resources/diagram.jpeg)
