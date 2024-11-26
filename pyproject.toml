@@ -1,0 +1,30 @@
+[project]
+name = "multimodal-rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "bs4>=0.0.2",
+    "html2text>=2024.2.26",
+    "kaggle>=1.6.17",
+    "langchain-openai>=0.2.9",
+    "langchain>=0.0.27",
+    "lxml>=5.3.0",
+    "nltk>=3.9.1",
+    "numpy>=1.24.4",
+    "pandas>=2.0.3",
+    "requests>=2.32.3",
+    "tqdm>=4.67.0",
+    "langchain-community>=0.3.8",
+    "langchain-chroma>=0.1.4",
+    "chromadb>=0.5.20",
+    "sentence-transformers>=3.3.1",
+    "ray>=2.39.0",
+    "langchain-cohere>=0.3.2",
+    "streamlit>=1.40.1",
+    "ipykernel>=6.29.5",
+    "dspy>=2.5.39",
+    "pydantic>=2.10.1",
+    "textgrad>=0.1.5",
+]
